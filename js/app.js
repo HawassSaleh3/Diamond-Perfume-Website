@@ -71,7 +71,7 @@ const I18N = {
     callNow: "اتصل بنا الآن",
     cAddress: "العنوان", cAddressV: "فردان، بيروت – لبنان",
     cPhone: "الهاتف / واتساب",
-    cHours: "أوقات الدوام", cHoursV: "يوميًا: 10:00 صباحًا – 10:00 مساءً",
+    cHours: "أوقات الدوام", cHoursV: "يوميًا: من 8–9 صباحًا حتى 8 مساءً",
     cPay: "الدفع", cPayV: "نقدًا عند الاستلام — USD أو LBP",
     cMap: "موقعنا على الخريطة",
 
@@ -174,7 +174,7 @@ const I18N = {
     callNow: "Call Us Now",
     cAddress: "Address", cAddressV: "Verdun, Beirut – Lebanon",
     cPhone: "Phone / WhatsApp",
-    cHours: "Opening Hours", cHoursV: "Daily: 10:00 AM – 10:00 PM",
+    cHours: "Opening Hours", cHoursV: "Daily: 8–9 AM until 8 PM",
     cPay: "Payment", cPayV: "Cash on delivery — USD or LBP",
     cMap: "Find Us on Google Maps",
 
@@ -544,24 +544,48 @@ function submitOrder() {
   if (!ok) { toast(t("errRequired")); return; }
 
   const sub = cartSubtotal();
-  const lines = cartEntries().map(({ p, qty }) => {
+  const S = lang === "ar" ? {
+    head: "💎 *طلب جديد — Diamond Perfume*",
+    items: "📦 *تفاصيل الطلب:*",
+    total: "💰 *مجموع المنتجات:*",
+    deliv: "🚚 *التوصيل:* يُتفق على الرسوم عند تأكيد الطلب",
+    pay: "💵 *الدفع:* نقدًا عند الاستلام",
+    name: "👤 *الاسم:*",
+    phone: "📞 *الهاتف:*",
+    area: "📍 *المنطقة:*",
+    addr: "🏠 *العنوان:*",
+    notes: "📝 *ملاحظات:*",
+    time: "🕒 *وقت الطلب:*",
+    thanks: "✨ شكرًا لثقتكم — Diamond Perfume، فردان – بيروت"
+  } : {
+    head: "💎 *New Order — Diamond Perfume*",
+    items: "📦 *Order Details:*",
+    total: "💰 *Products Total:*",
+    deliv: "🚚 *Delivery:* fee agreed upon order confirmation",
+    pay: "💵 *Payment:* Cash on delivery",
+    name: "👤 *Name:*",
+    phone: "📞 *Phone:*",
+    area: "📍 *Area:*",
+    addr: "🏠 *Address:*",
+    notes: "📝 *Notes:*",
+    time: "🕒 *Order time:*",
+    thanks: "✨ Thank you for your trust — Diamond Perfume, Verdun – Beirut"
+  };
+
+  const lines = cartEntries().map(({ p, qty }, i) => {
     const n = lang === "ar" ? p.name_ar : p.name_en;
-    return `• ${qty} × ${n} (${p.size}) — ${fmt(p.price * qty)}`;
+    return `${i + 1}) ${n} (${p.size})\n      ${qty} × ${fmt(p.price)} = ${fmt(p.price * qty)}`;
   });
 
+  const div = "━━━━━━━━━━━━━━━━━━";
+  const nowTxt = new Date().toLocaleString(lang === "ar" ? "ar-LB" : "en-GB", { dateStyle: "short", timeStyle: "short" });
+
   lastOrderMessage =
-    `${lang === "ar" ? "🛍 *طلب جديد من موقع* Diamond Perfume" : "🛍 *New order from the* Diamond Perfume *website*"}\n` +
-    `━━━━━━━━━━━━━━\n${lang === "ar" ? "*الطلبية:*" : "*Order:*"}\n${lines.join("\n")}\n` +
-    `━━━━━━━━━━━━━━\n` +
-    `💰 ${lang === "ar" ? "مجموع المنتجات" : "Products total"}: ${fmt(sub)}\n` +
-    `🚚 ${lang === "ar" ? "رسوم التوصيل: تُحدد عند التأكيد عبر واتساب" : "Delivery fee: set upon confirmation on WhatsApp"}\n` +
-    `━━━━━━━━━━━━━━\n` +
-    `👤 ${lang === "ar" ? "الاسم" : "Name"}: ${name}\n` +
-    `📞 ${lang === "ar" ? "الهاتف" : "Phone"}: ${phone}\n` +
-    `📍 ${lang === "ar" ? "المنطقة" : "Area"}: ${area}\n` +
-    `🏠 ${lang === "ar" ? "العنوان" : "Address"}: ${address}\n` +
-    (notes ? `📝 ${lang === "ar" ? "ملاحظات" : "Notes"}: ${notes}\n` : "") +
-    `💵 ${lang === "ar" ? "الدفع عند الاستلام" : "Cash on delivery"}`;
+    `${S.head}\n${div}\n${S.items}\n${lines.join("\n")}\n${div}\n` +
+    `${S.total} ${fmt(sub)}\n${S.deliv}\n${S.pay}\n${div}\n` +
+    `${S.name} ${name}\n${S.phone} ${phone}\n${S.area} ${area}\n${S.addr} ${address}\n` +
+    (notes ? `${S.notes} ${notes}\n` : "") +
+    `${S.time} ${nowTxt}\n${div}\n${S.thanks}`;
 
   window.open(waUrl(lastOrderMessage), "_blank");
 

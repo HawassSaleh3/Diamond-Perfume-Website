@@ -464,6 +464,10 @@ html[lang="ar"] .footer h4{ letter-spacing:.03em; }
 .footer-bar p{ color:var(--muted); font-size:.85rem; }
 .footer-tip{ color:var(--gold-2) !important; }
 
+/* Phone numbers stay LTR but align with RTL text */
+html[dir="rtl"] .footer-contact a[dir="ltr"]{ align-self:flex-end; text-align:right; }
+html[dir="rtl"] .ccard p[dir="ltr"]{ text-align:right; }
+
 /* ---------- WhatsApp FAB ---------- */
 .wa-fab{
   position:fixed; bottom:calc(22px + env(safe-area-inset-bottom)); inset-inline-end:calc(22px + env(safe-area-inset-right)); z-index:90;

@@ -10,8 +10,8 @@ const STORE = {
   whatsapp: "96171167878", // wa.me format (no + sign)
   address_ar: "فردان، بيروت – لبنان",
   address_en: "Verdun, Beirut – Lebanon",
-  hours_ar: "يوميًا: 10:00 صباحًا – 10:00 مساءً",
-  hours_en: "Daily: 10:00 AM – 10:00 PM",
+  hours_ar: "يوميًا: من 8–9 صباحًا حتى 8 مساءً",
+  hours_en: "Daily: 8–9 AM until 8 PM",
   currency: "$",
   mapsUrl: "https://www.google.com/maps/search/?api=1&query=33.8871298%2C35.483308",
   mapsEmbed: "https://www.google.com/maps?q=33.8871298,35.483308&z=17&output=embed",
