@@ -561,6 +561,7 @@ html[dir="rtl"] .drawer{ transform:translateX(-105%); box-shadow:20px 0 60px rgb
   background:var(--grad-gold); -webkit-background-clip:text; background-clip:text; -webkit-text-fill-color:transparent;
 }
 .free-note{ font-size:.8rem; color:var(--gold-2); text-align:center; }
+.sum-row strong.tbd{ font-size:.82rem; font-weight:500; color:var(--gold-2); }
 .drawer-foot .btn:first-of-type{ margin-top:.5rem; }
 
 /* checkout form */

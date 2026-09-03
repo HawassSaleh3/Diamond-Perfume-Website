@@ -13,8 +13,6 @@ const STORE = {
   hours_ar: "يوميًا: 10:00 صباحًا – 10:00 مساءً",
   hours_en: "Daily: 10:00 AM – 10:00 PM",
   currency: "$",
-  deliveryFee: 2,        // رسوم التوصيل لكل لبنان
-  freeDeliveryOver: 75,  // توصيل مجاني للطلبات فوق هذا المبلغ
 };
 
 /*

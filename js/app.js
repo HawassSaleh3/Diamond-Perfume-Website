@@ -20,7 +20,7 @@ const I18N = {
     statTime: "24-48", statTimeL: "ساعة للتوصيل",
     statOriginal: "100%", statOriginalL: "أصلي مضمون",
 
-    feat1: "توصيل لكل لبنان", feat1s: "إلى باب منزلك في كل المناطق — $2 فقط، مجانًا فوق $75",
+    feat1: "توصيل لكل لبنان", feat1s: "إلى باب منزلك في كل المناطق اللبنانية — سريع ومضمون",
     feat2: "الدفع عند الاستلام", feat2s: "افحص طلبك أولًا، وادفع نقدًا عند وصوله",
     feat3: "أصلي 100%", feat3s: "عطور أصلية مضمونة من موردين معتمدين",
     feat4: "خدمة شخصية", feat4s: "نساعدك لاختيار عطرك المثالي عبر واتساب",
@@ -46,7 +46,7 @@ const I18N = {
     step1: "اختر عطورك", step1s: "تصفح التشكيلة وأضف ما يعجبك إلى السلة",
     step2: "أرسل طلبك", step2s: "أكمل الطلب من السلة ليصلك مباشرة على واتساب",
     step3: "استلم وادفع", step3s: "خلال 24–48 ساعة على باب بيتك، والدفع عند الاستلام",
-    delNote: "رسوم التوصيل $2 لكل المناطق اللبنانية — ومجانية للطلبات فوق $75 · الدفع نقدًا عند الاستلام (LBP أو USD)",
+    delNote: "رسوم التوصيل تُحدد حسب منطقتك عند تأكيد طلبك عبر واتساب · الدفع نقدًا عند الاستلام (USD أو LBP)",
 
     testTag: "آراء عملائنا", testTitle: "ثقةٌ تفوح مثل العطر",
     test1: "«أفضل تجربة شراء عطور في بيروت! طلبت عبر الموقع ووصلني بأقل من 24 ساعة، والعطر أصلي 100%. شكرًا Diamond!»",
@@ -69,11 +69,11 @@ const I18N = {
     cartTitle: "سلة التسوق",
     cartEmpty: "سلتك فارغة… سجّل عطرك المفضل 🌟",
     startShopping: "ابدأ التسوق",
-    subtotal: "المجموع الفرعي", deliveryFee: "رسوم التوصيل", total: "الإجمالي",
-    freeDelivery: "مجاني 🎉", checkout: "إتمام الطلب عبر واتساب",
+    subtotal: "المجموع الفرعي", deliveryFee: "رسوم التوصيل",
+    deliveryTbd: "تُحدد عبر واتساب", orderTotal: "مجموع المنتجات",
+    checkout: "إتمام الطلب عبر واتساب",
     callOrder: "أو اتصل بنا لإتمام الطلب",
-    freeNoteMore: "أضف {x} للحصول على توصيل مجاني ✨",
-    freeNoteDone: "رائع! حصلت على توصيل مجاني 🎉",
+    deliveryNoteCart: "🚚 رسوم التوصيل تُحدد حسب منطقتك عند تأكيد طلبك عبر واتساب",
 
     formIntro: "أدخل معلوماتك ليصلك طلبك إلى باب بيتك 👇",
     fName: "الاسم الكامل *", fNamePh: "اكتب اسمك الكامل",
@@ -109,7 +109,7 @@ const I18N = {
     statTime: "24-48", statTimeL: "Hours delivery",
     statOriginal: "100%", statOriginalL: "Authentic guaranteed",
 
-    feat1: "Delivery All Over Lebanon", feat1s: "To your doorstep everywhere — only $2, free over $75",
+    feat1: "Delivery All Over Lebanon", feat1s: "To your doorstep everywhere across Lebanon — fast and guaranteed",
     feat2: "Cash On Delivery", feat2s: "Inspect your order first, pay cash on arrival",
     feat3: "100% Authentic", feat3s: "Guaranteed original perfumes from trusted suppliers",
     feat4: "Personal Service", feat4s: "We help you find your perfect scent on WhatsApp",
@@ -135,7 +135,7 @@ const I18N = {
     step1: "Choose Your Scent", step1s: "Browse the collection and add favorites to your cart",
     step2: "Send Your Order", step2s: "Complete checkout and it reaches us instantly on WhatsApp",
     step3: "Receive & Pay", step3s: "Within 24–48 hours at your door — pay cash on delivery",
-    delNote: "Delivery is $2 to all Lebanese areas — free for orders over $75 · Cash on delivery (USD or LBP)",
+    delNote: "The delivery fee for your area is set when we confirm your order on WhatsApp · Cash on delivery (USD or LBP)",
 
     testTag: "Testimonials", testTitle: "Trust That Smells Like Perfume",
     test1: "“The best perfume shopping experience in Beirut! I ordered from the website and it arrived in under 24 hours — 100% authentic. Thank you Diamond!”",
@@ -158,11 +158,11 @@ const I18N = {
     cartTitle: "Your Cart",
     cartEmpty: "Your cart is empty… add your signature scent 🌟",
     startShopping: "Start Shopping",
-    subtotal: "Subtotal", deliveryFee: "Delivery Fee", total: "Total",
-    freeDelivery: "Free 🎉", checkout: "Checkout via WhatsApp",
+    subtotal: "Subtotal", deliveryFee: "Delivery Fee",
+    deliveryTbd: "Set via WhatsApp", orderTotal: "Products Total",
+    checkout: "Checkout via WhatsApp",
     callOrder: "Or call us to place your order",
-    freeNoteMore: "Add {x} more for free delivery ✨",
-    freeNoteDone: "Great! You've unlocked free delivery 🎉",
+    deliveryNoteCart: "🚚 The delivery fee for your area is set when we confirm your order on WhatsApp",
 
     formIntro: "Enter your details so your order arrives at your doorstep 👇",
     fName: "Full Name *", fNamePh: "Your full name",
@@ -378,10 +378,6 @@ function cartEntries() {
 }
 function cartCount() { return cartEntries().reduce((s, e) => s + e.qty, 0); }
 function cartSubtotal() { return cartEntries().reduce((s, e) => s + e.p.price * e.qty, 0); }
-function deliveryFee() {
-  const sub = cartSubtotal();
-  return sub === 0 || sub >= STORE.freeDeliveryOver ? 0 : STORE.deliveryFee;
-}
 function saveCart() {
   localStorage.setItem("dp_cart", JSON.stringify(cart));
   $("#cartCount").textContent = cartCount();
@@ -440,15 +436,11 @@ function renderCart() {
     </div>`).join("");
 
   const sub = cartSubtotal();
-  const del = deliveryFee();
   $("#sumSubtotal").textContent = fmt(sub);
-  $("#sumDelivery").textContent = del === 0 ? t("freeDelivery") : fmt(del);
-  $("#sumTotal").textContent = fmt(sub + del);
-  $("#formTotal").textContent = fmt(sub + del);
+  $("#sumDelivery").textContent = t("deliveryTbd");
+  $("#formTotal").textContent = fmt(sub);
 
-  const note = $("#freeNote");
-  if (del === 0) note.textContent = t("freeNoteDone");
-  else note.textContent = t("freeNoteMore").replace("{x}", fmt(STORE.freeDeliveryOver - sub));
+  $("#freeNote").textContent = t("deliveryNoteCart");
 
   $$("[data-plus]", body).forEach((b) => b.addEventListener("click", () => setQty(b.dataset.plus, cart[b.dataset.plus] + 1)));
   $$("[data-minus]", body).forEach((b) => b.addEventListener("click", () => setQty(b.dataset.minus, cart[b.dataset.minus] - 1)));
@@ -522,7 +514,6 @@ function submitOrder() {
   if (!ok) { toast(t("errRequired")); return; }
 
   const sub = cartSubtotal();
-  const del = deliveryFee();
   const lines = cartEntries().map(({ p, qty }) => {
     const n = lang === "ar" ? p.name_ar : p.name_en;
     return `• ${qty} × ${n} (${p.size}) — ${fmt(p.price * qty)}`;
@@ -532,9 +523,8 @@ function submitOrder() {
     `${lang === "ar" ? "🛍 *طلب جديد من موقع* Diamond Perfume" : "🛍 *New order from the* Diamond Perfume *website*"}\n` +
     `━━━━━━━━━━━━━━\n${lang === "ar" ? "*الطلبية:*" : "*Order:*"}\n${lines.join("\n")}\n` +
     `━━━━━━━━━━━━━━\n` +
-    `${lang === "ar" ? "المجموع الفرعي" : "Subtotal"}: ${fmt(sub)}\n` +
-    `${lang === "ar" ? "التوصيل" : "Delivery"}: ${del === 0 ? (lang === "ar" ? "مجاني" : "Free") : fmt(del)}\n` +
-    `💰 ${lang === "ar" ? "الإجمالي" : "Total"}: ${fmt(sub + del)}\n` +
+    `💰 ${lang === "ar" ? "مجموع المنتجات" : "Products total"}: ${fmt(sub)}\n` +
+    `🚚 ${lang === "ar" ? "رسوم التوصيل: تُحدد عند التأكيد عبر واتساب" : "Delivery fee: set upon confirmation on WhatsApp"}\n` +
     `━━━━━━━━━━━━━━\n` +
     `👤 ${lang === "ar" ? "الاسم" : "Name"}: ${name}\n` +
     `📞 ${lang === "ar" ? "الهاتف" : "Phone"}: ${phone}\n` +
