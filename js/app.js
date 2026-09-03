@@ -54,6 +54,7 @@ const I18N = {
     test3: "«أسعارهم منافسة جدًا مقارنة بالمحلات الأخرى، والتوصيل وصل جونية بيوم واحد. صار عندهم زبون دائم.»",
 
     contactTag: "تواصل معنا", contactTitle: "زورونا… أو اطلب عن بُعد",
+    followUs: "تابعنا على",
     contactSub: "يسعدنا استقبالك في متجرنا بفردان، أو خِدمك عن بُعد — فريقنا جاهز للإجابة على كل استفساراتك ومساعدتك في اختيار عطرك.",
     callNow: "اتصل بنا الآن",
     cAddress: "العنوان", cAddressV: "فردان، بيروت – لبنان",
@@ -142,6 +143,7 @@ const I18N = {
     test3: "“Their prices are very competitive compared to other shops, and delivery reached Jounieh in one day. I'm a regular customer now.”",
 
     contactTag: "Contact Us", contactTitle: "Visit Us… Or Order From Anywhere",
+    followUs: "Follow us",
     contactSub: "We'd love to welcome you at our Verdun boutique — or serve you remotely. Our team is ready to answer all your questions and help you find your scent.",
     callNow: "Call Us Now",
     cAddress: "Address", cAddressV: "Verdun, Beirut – Lebanon",

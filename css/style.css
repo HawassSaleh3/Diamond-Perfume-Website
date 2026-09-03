@@ -474,6 +474,17 @@ html[lang="ar"] .footer h4{ letter-spacing:.03em; }
 }
 @keyframes ring{ 0%{ transform:scale(.8); opacity:1;} 100%{ transform:scale(1.35); opacity:0;} }
 
+/* socials */
+.socials{ display:flex; align-items:center; gap:.6rem; margin-top:1.2rem; flex-wrap:wrap; }
+.soc-btn{
+  width:42px; height:42px; border-radius:50%;
+  border:1px solid rgba(248,217,125,.4); color:var(--gold-1);
+  display:grid; place-items:center; transition:var(--tr);
+}
+.soc-btn .ic{ width:1.15rem; height:1.15rem; }
+.soc-btn:hover{ background:var(--grad-gold); color:#181205; border-color:transparent; transform:translateY(-3px); box-shadow:0 8px 20px rgba(224,180,88,.3); }
+.socials-label{ color:var(--muted); font-size:.85rem; margin-inline-start:.3rem; }
+
 /* ---------- Cart Drawer ---------- */
 .drawer-backdrop, .modal-backdrop{
   position:fixed; inset:0; z-index:110; background:rgba(5,5,4,.66);
