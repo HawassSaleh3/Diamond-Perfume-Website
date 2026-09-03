@@ -13,10 +13,12 @@ const STORE = {
   hours_ar: "يوميًا: 10:00 صباحًا – 10:00 مساءً",
   hours_en: "Daily: 10:00 AM – 10:00 PM",
   currency: "$",
+  mapsUrl: "https://www.google.com/maps/search/?api=1&query=33.8871298%2C35.483308",
+  mapsEmbed: "https://www.google.com/maps?q=33.8871298,35.483308&z=17&output=embed",
 };
 
 /*
-  cat: "men" | "women" | "unisex"
+  cat: "men" | "women" | "unisex" | "acc"
   badge: "bestseller" | "new" | "sale" | null
   oldPrice: للخصم فقط
 */
@@ -140,6 +142,51 @@ const PRODUCTS = [
     desc_en: "Liquid gold in your hands: a lush bouquet of lily, jasmine and Damask rose over warm amber. A classic that never fades.",
     notes_ar: "المقدمة: كمثرى وماغنوليا • القلب: زنبق وياسمين وورد • القاعدة: عنبر ومسك أبيض",
     notes_en: "Top: Pear & Magnolia • Heart: Lily, Jasmine & Rose • Base: Amber & White Musk"
+  },
+  {
+    id: "mabkhara-gold",
+    img: "images/products/mabkhara.jpg",
+    cat: "acc",
+    price: 15,
+    oldPrice: null,
+    badge: "new",
+    name_ar: "مبخرة ذهبية فاخرة",
+    name_en: "Golden Mabkhara",
+    size: "قطعة",
+    desc_ar: "مبخرة أنيقة بتصميم عربي أصيل ولمسات ذهبية — توزّع بخور العود بفخامة تليق بمجلسك.",
+    desc_en: "An elegant mabkhara with authentic Arabian design and golden touches — spreads oud bakhoor luxuriously.",
+    notes_ar: "معدن مصقول عالي الجودة • تصميم عربي أصيل",
+    notes_en: "High-quality polished metal • Authentic Arabian design"
+  },
+  {
+    id: "bakhoor-oud",
+    img: "images/products/bakhoor.jpg",
+    cat: "acc",
+    price: 12,
+    oldPrice: null,
+    badge: "bestseller",
+    name_ar: "بخور عود ملكي",
+    name_en: "Royal Oud Bakhoor",
+    size: "50g",
+    desc_ar: "بخور عود معتّق برائحة دافئة تدوم طويلًا — مثالي للمجالس والمناسبات.",
+    desc_en: "Aged oud bakhoor with a long-lasting warm aroma — perfect for majlis and gatherings.",
+    notes_ar: "عود • عنبر • مسك",
+    notes_en: "Oud • Amber • Musk"
+  },
+  {
+    id: "oud-oil",
+    img: "images/products/oud-oil.jpg",
+    cat: "acc",
+    price: 25,
+    oldPrice: 30,
+    badge: "sale",
+    name_ar: "دهن عود ملكي",
+    name_en: "Royal Oud Oil",
+    size: "6ml",
+    desc_ar: "دهن عود صافٍ بتركيز عالٍ — قطرة واحدة تكفي لثبات يدوم طوال اليوم.",
+    desc_en: "Pure, high-concentration oud oil — one drop lasts all day.",
+    notes_ar: "دهن عود صافي 100%",
+    notes_en: "100% pure oud oil"
   }
 ];
 

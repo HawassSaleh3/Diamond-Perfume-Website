@@ -7,11 +7,11 @@ const I18N = {
   ar: {
     announce: "توصيل لكل لبنان — الدفع عند الاستلام",
     brandSub: "PERFUME · BEIRUT",
-    navHome: "الرئيسية", navProducts: "العطور", navAbout: "من نحن",
+    navHome: "الرئيسية", navProducts: "العطور", navServices: "خدماتنا", navAbout: "من نحن",
     navDelivery: "التوصيل", navContact: "تواصل معنا",
     waOrder: "اطلب عبر واتساب",
 
-    heroKicker: "متجر عطور فاخرة — فردان، بيروت",
+    heroKicker: "بيع · تعبئة · صناعة عطور — فردان، بيروت",
     heroTitle: "عطرُك هو توقيعك… اجعلُه ماسيًّا",
     heroSub: "تشكيلة مختارة بعناية من أفخر العطور الأصلية للرجال والنساء — توصيل سريع إلى كل المناطق اللبنانية ودفع مريح عند الاستلام.",
     heroCtaShop: "تسوّق العطور",
@@ -25,22 +25,34 @@ const I18N = {
     feat3: "أصلي 100%", feat3s: "عطور أصلية مضمونة من موردين معتمدين",
     feat4: "خدمة شخصية", feat4s: "نساعدك لاختيار عطرك المثالي عبر واتساب",
 
+    servTag: "خدماتنا", servTitle: "أكثر من مجرد متجر عطور",
+    servSub: "بيع · تعبئة · صناعة — كل ما يتعلق بالعطور تحت سقف واحد في فردان",
+    serv1: "بيع عطور أصلية", serv1s: "تشكيلة رجالية ونسائية وللجنسين من أشهر البيوت العالمية وبأسعار منافسة",
+    serv2: "تعبئة عطور", serv2s: "نعبّئ عطورك المفضلة بزيوت عطرية فاخرة عالية الثبات — أثناء انتظارك في المتجر",
+    serv3: "صناعة عطور خاصة", serv3s: "اختر مزيجك المميز ونصنع لك عطرك الخاص بعبوة فاخرة — هدية لا تُنسى",
+    serv4: "مباخر وبخور وعود", serv4s: "مباخر فاخرة، بخور عود ودهن عود — كل ما يكمل تجربة العطر",
+    servCta: "اطلب عطرك الخاص الآن",
+
     prodTag: "تشكيلتنا", prodTitle: "عطورٌ تروي حكايتك",
     prodSub: "اختر عطرك المفضل وأضفه إلى السلة — ويصلك إلى باب بيتك في كل لبنان",
-    fAll: "الكل", fMen: "رجالي", fWomen: "نسائي", fUnisex: "للجنسين",
-    catMen: "رجالي", catWomen: "نسائي", catUnisex: "للجنسين",
+    fAll: "الكل", fMen: "رجالي", fWomen: "نسائي", fUnisex: "للجنسين", fAcc: "مباخر وبخور",
+    catMen: "رجالي", catWomen: "نسائي", catUnisex: "للجنسين", catAcc: "مباخر وبخور",
     badgeBestseller: "الأكثر مبيعًا", badgeNew: "جديد", badgeSale: "خصم",
     addToCart: "أضف إلى السلة",
     waQuick: "اطلب هذا العطر مباشرة عبر واتساب",
 
     aboutTag: "من نحن", aboutTitle: "حيث تبدأ رحلة عطرك",
-    aboutP1: "في قلب فردان، أحد أرقى أحياء بيروت، وُلد شغفنا بالعطور. «Diamond Perfume» ليس مجرد متجر — إنه تجربة عطرية متكاملة ننتقي فيها لكم أفخر العطور الأصلية من أشهر البيوت العالمية، لرجل وامرأة تبحثان عن التوقيع الذي يشبههما.",
+    aboutP1: "في قلب فردان، أحد أرقى أحياء بيروت، وُلد شغفنا بالعطور. «Diamond Perfume» بيت عطور متكامل: نبيع أفخر العطور الأصلية العالمية، نعبّئ عطورك المفضلة بزيوت فاخرة وأنت تنتظر، ونصنع لك عطرًا خاصًا بتركيبة تصممها بنفسك — إضافة إلى مباخر وبخور وأجود أنواع العود.",
     aboutP2: "نؤمن أن العطر ذاكرة وثقة وأول انطباع لا يُنسى؛ لذلك نمنحك خدمة شخصية تساعدك في اختيار عطرك المثالي، ونوصله إلى بابك أينما كنت في لبنان.",
     aboutLi1: "انتقاء فاخر من عطور أصلية مضمونة",
-    aboutLi2: "أسعار منافسة وعرض موسمي دائم",
-    aboutLi3: "استشارة عطرية مجانية عبر واتساب",
+    aboutLi2: "تعبئة عطورك المفضلة أثناء الانتظار",
+    aboutLi3: "صناعة عطر خاص بتركيبتك المفضلة",
+    aboutLi4: "مباخر وبخور وعود بجودة فاخرة",
     aboutCta: "زورونا في المتجر",
     aboutBadgeT: "فردان – بيروت", aboutBadgeS: "قلب العطور اللبنانية",
+
+    galTag: "داخل المتجر", galTitle: "جولة داخل متجرنا",
+    galSub: "زورونا في فردان وعِش تجربة العطر عن قرب",
 
     delTag: "التوصيل والطلب", delTitle: "اطلب بسهولة… واستلم بسرعة",
     step1: "اختر عطورك", step1s: "تصفح التشكيلة وأضف ما يعجبك إلى السلة",
@@ -61,6 +73,7 @@ const I18N = {
     cPhone: "الهاتف / واتساب",
     cHours: "أوقات الدوام", cHoursV: "يوميًا: 10:00 صباحًا – 10:00 مساءً",
     cPay: "الدفع", cPayV: "نقدًا عند الاستلام — USD أو LBP",
+    cMap: "موقعنا على الخريطة",
 
     fLinks: "روابط سريعة", fContact: "تواصل",
     rights: "جميع الحقوق محفوظة", footerTip: "صُنع بحب في بيروت 💛",
@@ -91,16 +104,17 @@ const I18N = {
     addedToast: "أُضيف إلى السلة ✓",
     langBtn: "EN",
     orderMsg: "مرحباً Diamond Perfume 👋\nأرغب بالاستفسار عن العطور والطلب.",
+    customMsg: "مرحباً Diamond Perfume 👋\nأرغب بصناعة عطر خاص بتركيبتي المفضلة.",
   },
 
   en: {
     announce: "Delivery all over Lebanon — Cash on delivery",
     brandSub: "PERFUME · BEIRUT",
-    navHome: "Home", navProducts: "Perfumes", navAbout: "About",
+    navHome: "Home", navProducts: "Perfumes", navServices: "Services", navAbout: "About",
     navDelivery: "Delivery", navContact: "Contact",
     waOrder: "Order on WhatsApp",
 
-    heroKicker: "Luxury Perfume Boutique — Verdun, Beirut",
+    heroKicker: "Sell · Refill · Create — Verdun, Beirut",
     heroTitle: "Your Scent Is Your Signature… Make It Diamond",
     heroSub: "A carefully curated collection of the finest authentic perfumes for men and women — fast delivery across Lebanon and easy cash-on-delivery payment.",
     heroCtaShop: "Shop Perfumes",
@@ -114,22 +128,34 @@ const I18N = {
     feat3: "100% Authentic", feat3s: "Guaranteed original perfumes from trusted suppliers",
     feat4: "Personal Service", feat4s: "We help you find your perfect scent on WhatsApp",
 
+    servTag: "Our Services", servTitle: "More Than Just a Perfume Store",
+    servSub: "Sell · Refill · Create — everything perfume under one roof in Verdun",
+    serv1: "Authentic Perfumes", serv1s: "Men's, women's and unisex collections from the world's most renowned houses at competitive prices",
+    serv2: "Perfume Refill", serv2s: "We refill your favorite perfume with premium long-lasting fragrance oils — while you wait",
+    serv3: "Custom Perfume Making", serv3s: "Choose your signature blend and we craft your own perfume in a luxurious bottle — an unforgettable gift",
+    serv4: "Burners, Bakhoor & Oud", serv4s: "Luxury mabakher, oud bakhoor and pure oud oil — everything to complete your fragrance ritual",
+    servCta: "Order Your Custom Perfume",
+
     prodTag: "Our Collection", prodTitle: "Perfumes That Tell Your Story",
     prodSub: "Pick your favorite scent, add it to the cart — and it arrives at your door anywhere in Lebanon",
-    fAll: "All", fMen: "Men", fWomen: "Women", fUnisex: "Unisex",
-    catMen: "Men", catWomen: "Women", catUnisex: "Unisex",
+    fAll: "All", fMen: "Men", fWomen: "Women", fUnisex: "Unisex", fAcc: "Burners & Bakhoor",
+    catMen: "Men", catWomen: "Women", catUnisex: "Unisex", catAcc: "Burners & Bakhoor",
     badgeBestseller: "Bestseller", badgeNew: "New", badgeSale: "Sale",
     addToCart: "Add to Cart",
     waQuick: "Order this perfume directly on WhatsApp",
 
     aboutTag: "About Us", aboutTitle: "Where Your Fragrance Journey Begins",
-    aboutP1: "In the heart of Verdun — one of Beirut's most elegant districts — our passion for perfumes was born. Diamond Perfume is more than a shop; it's a complete fragrance experience where we curate the finest authentic perfumes from the world's most renowned houses, for the man and woman seeking their signature scent.",
+    aboutP1: "In the heart of Verdun — one of Beirut's most elegant districts — our passion for perfumes was born. Diamond Perfume is a complete fragrance house: we sell the finest authentic international perfumes, refill your favorite scents with premium oils while you wait, and craft your own custom fragrance with a blend you design — plus bakhoor burners, bakhoor and the finest oud.",
     aboutP2: "We believe a fragrance is memory, confidence and an unforgettable first impression. That's why we offer personal guidance to help you choose your perfect scent — and deliver it to your doorstep anywhere in Lebanon.",
     aboutLi1: "Luxury curation of guaranteed authentic perfumes",
-    aboutLi2: "Competitive prices with year-round offers",
-    aboutLi3: "Free fragrance consultation on WhatsApp",
+    aboutLi2: "Refill your favorite perfumes with premium long-lasting oils",
+    aboutLi3: "Custom fragrance creation with your personal blend",
+    aboutLi4: "Luxury bakhoor burners, bakhoor & pure oud",
     aboutCta: "Visit Our Store",
     aboutBadgeT: "Verdun – Beirut", aboutBadgeS: "Heart of Lebanese perfumery",
+
+    galTag: "Inside The Store", galTitle: "A Tour Inside Our Boutique",
+    galSub: "Visit us in Verdun and experience the world of fragrance up close",
 
     delTag: "Delivery & Ordering", delTitle: "Order Easily… Receive Quickly",
     step1: "Choose Your Scent", step1s: "Browse the collection and add favorites to your cart",
@@ -150,6 +176,7 @@ const I18N = {
     cPhone: "Phone / WhatsApp",
     cHours: "Opening Hours", cHoursV: "Daily: 10:00 AM – 10:00 PM",
     cPay: "Payment", cPayV: "Cash on delivery — USD or LBP",
+    cMap: "Find Us on Google Maps",
 
     fLinks: "Quick Links", fContact: "Contact",
     rights: "All rights reserved", footerTip: "Made with love in Beirut 💛",
@@ -180,6 +207,7 @@ const I18N = {
     addedToast: "Added to cart ✓",
     langBtn: "عربي",
     orderMsg: "Hello Diamond Perfume 👋\nI'd like to ask about your perfumes and place an order.",
+    customMsg: "Hello Diamond Perfume 👋\nI'd like to create my own custom fragrance.",
   }
 };
 
@@ -210,8 +238,8 @@ function applyLang() {
   });
   $("#langBtn").textContent = t("langBtn");
   document.title = lang === "ar"
-    ? "Diamond Perfume | عطور فاخرة أصلية – فردان، بيروت | توصيل لكل لبنان"
-    : "Diamond Perfume | Authentic Luxury Perfumes – Verdun, Beirut | Delivery All Over Lebanon";
+    ? "Diamond Perfume | بيع وتعبئة وصناعة عطور – فردان، بيروت | توصيل لكل لبنان"
+    : "Diamond Perfume | Sell, Refill & Create Perfumes – Verdun, Beirut | Delivery Across Lebanon";
 
   buildAreaOptions();
   renderProducts();
@@ -235,6 +263,8 @@ function generalOrderMsg() {
 function updateWaLinks() {
   const url = waUrl(generalOrderMsg());
   $$(".js-wa-order").forEach((a) => (a.href = url));
+  const customUrl = waUrl(t("customMsg"));
+  $$(".js-wa-custom").forEach((a) => (a.href = customUrl));
   $("#waFab").href = url;
   $("#mobileWaBtn").href = url;
 }
@@ -586,12 +616,33 @@ function bindReveal() {
   $$(".reveal").forEach((el) => io.observe(el));
 }
 
+/* ---------------- Gallery lightbox ---------------- */
+function bindGallery() {
+  const lb = $("#lightbox");
+  if (!lb) return;
+  const lbImg = $("#lbImg");
+  $$(".g-item img").forEach((img) =>
+    img.addEventListener("click", () => {
+      lbImg.src = img.src;
+      lbImg.alt = img.alt;
+      lb.classList.add("open");
+      document.body.style.overflow = "hidden";
+    })
+  );
+  lb.addEventListener("click", () => {
+    lb.classList.remove("open");
+    lbImg.src = "";
+    document.body.style.overflow = "";
+  });
+}
+
 /* ---------------- Init ---------------- */
 document.addEventListener("DOMContentLoaded", () => {
   $("#year").textContent = new Date().getFullYear();
   $("#langBtn").addEventListener("click", switchLang);
   bindNav();
   bindFilters();
+  bindGallery();
   bindModal();
   bindDrawer();
   applyLang();
@@ -599,7 +650,12 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // close things on Escape
   document.addEventListener("keydown", (e) => {
-    if (e.key === "Escape") { closeDrawer(); closeQuickView(); }
+    if (e.key === "Escape") {
+      closeDrawer();
+      closeQuickView();
+      $("#lightbox").classList.remove("open");
+      document.body.style.overflow = "";
+    }
   });
 
   // preloader
